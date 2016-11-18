@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.ants.plugin.wifienterprise" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>WifiEnterprise</name>
+    <engines>
+      <engine name = "cordova-android" version=">=4"/>
+      <engine name = "cordova-plugman" version=">=4.2.0"/>
+    </engines>
+    <js-module name="WifiEnterprise" src="www/WifiEnterprise.js">
+        <clobbers target="wifienterprise" />
+    </js-module>
+
+    <platform name="android">
+      <config-file target="config.xml" parent="/*">
+        <feature name="WifiEnterprise">
+            <param name="android-package" value="com.ants.plugin.wifienterprise.WifiEnterprise"/>
+        </feature>
+      </config-file>
+      <source-file src="src/android/com/ants/plugin/wifienterprise/WifiEnterprise.java"  target-dir="src/com/ants/plugin/wifienterprise" />
+    </platform>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+               <uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+			<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+               <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+               <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	</config-file>
+</plugin>

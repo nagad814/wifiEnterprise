@@ -1,0 +1,27 @@
+{
+  "name": "WifiEnterprise",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "com.ants.plugin.wifienterprise",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4"
+    },
+    {
+      "name": "cordova-plugman",
+      "version": ">=4.2.0"
+    }
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
